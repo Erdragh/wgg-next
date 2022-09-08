@@ -8,7 +8,7 @@ export default function Cards({
   cards: { title: string; img: string; href: string }[];
 }) {
   return (
-    <div className={styles.cards}>
+    <div className={"confine-width " + styles.cards}>
       {cards.map((card) => {
         return (
           <Card

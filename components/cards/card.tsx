@@ -8,7 +8,7 @@ export default function Card({href, img, title}) {
     <Link href={href}>
       <a className={styles.card}>
         <div className={styles.imageContainer}>
-          <Image layout="fill" alt={title} src={img}></Image>
+          <Image objectFit="cover" layout="fill" alt={title} src={img}></Image>
         </div>
         <div className={styles.cardBody}>
           {title}
