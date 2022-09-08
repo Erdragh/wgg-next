@@ -7,27 +7,25 @@
   margin-bottom: 2rem;
   &:hover {
     text-decoration: none;
-    transform: scale(1.01);
-    transform-origin: 50% 100%;
+    transform: scale(1.01 );
+    transform-origin: 50% 50%;
   }
 
   .imageContainer {
     position: relative;
     width: 100%;
     height: 200px;
-    border-radius: 15px;
+    border-radius: var(--wgg-sz-base);
     overflow: hidden;
     box-shadow: 0 0 25px rgba(var(--wgg-clr-dark-rgb), .3);
-    z-index: 1;
   }
 
   .cardBody {
-    z-index: 2;
     position: relative;
-    margin-inline: 15px;
+    margin-inline: var(--wgg-sz-base);
     box-shadow: 0 0 25px rgba(var(--wgg-clr-dark-rgb), .2);
-    padding: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    padding: var(--wgg-sz-base);
+    border-bottom-left-radius: var(--wgg-sz-base);
+    border-bottom-right-radius: var(--wgg-sz-base);
   }
 }
