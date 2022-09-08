@@ -1,5 +1,18 @@
 .cards {
-  columns: 3 auto;
+  columns: 1 auto;
   column-gap: 2rem;
   padding: 2rem;
+}
+
+@media (min-width: 600px) {
+  .cards {
+
+    columns: 2 auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    columns: 3 auto;
+  }
 }
