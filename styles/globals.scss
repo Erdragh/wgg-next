@@ -1,0 +1,53 @@
+@use "sass:color";
+
+@mixin color($name, $col) {
+  --wgg-clr-#{$name}: #{$col};
+  --wgg-clr-#{$name}-rgb: #{color.red($col),color.green($col),color.blue($col)};
+}
+
+@mixin colors($name, $col, $contrast, $lighten) {
+  @include color($name, $col);
+  @include color($name + "-contrast", $contrast);
+  $tintCol: $col;
+  @if ($lighten > 0) {
+    $tintCol: lighten($col, $lighten);
+  } @else {
+    $tintCol: darken($col, -$lighten);
+  }
+  @include color($name + "-tint", $tintCol);
+}
+
+:root {
+  @include colors("primary", rgb(255, 101, 55), rgb(20,20,20), 20%);
+  @include colors("dark", rgb(20,20,20), rgb(240,240,240), -10%);
+
+  --wgg-sz-base: 6px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus-visible {
+    box-shadow: inset 0 0 0 3px black;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.confine-width {
+  max-width: 1080px;
+  margin-inline: auto;
+}

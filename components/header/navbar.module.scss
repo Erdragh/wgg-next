@@ -1,0 +1,26 @@
+.navbar {
+  background-color: var(--wgg-clr-primary);
+  color: var(--wgg-clr-primary-contrast);
+  box-shadow: 0 -30px 20px 30px rgba(var(--wgg-clr-dark-rgb), .5);
+
+  .navbarInner {
+    display: flex;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: var(--wgg-sz-base);
+  }
+
+  .linkContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    .link {
+      margin-inline: var(--wgg-sz-base);
+    }
+  }
+}
