@@ -11,16 +11,18 @@
     z-index: 2;
   }
   .dropdownContent {
-    transform: scale(.5);
+    transform: scale(.5) perspective(20rem) rotateX(-90deg);
     transform-origin: 100% 0;
-    transition-duration: .15s;
+    transition-duration: .2s;
     z-index: 1;
     position: absolute;
     opacity: 0;
     pointer-events: none;
     padding: var(--wgg-sz-base);
     background-color: var(--wgg-clr-primary-tint);
-    // background-color: #fff;
+    border-radius: var(--wgg-sz-base);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
     right: 0;
     box-shadow: 0 3px 49px 0px rgba(var(--wgg-clr-dark-rgb), .2);
   }
