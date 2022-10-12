@@ -1,9 +1,11 @@
-import styles from "./header.module.scss";
+import styles from "./footer.module.scss";
 
 export default function Footer() {
-  return (
-    <nav>
-      <a href="test">Test</a>
-    </nav>
-  )
+    return (
+        <footer className={styles.footer}>
+            <div className={`${styles.inner} confine-width`}>
+                Developed by Erdragh
+            </div>
+        </footer>
+    )
 }
